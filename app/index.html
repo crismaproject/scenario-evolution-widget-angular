@@ -1,25 +1,80 @@
 <!doctype html>
-<html lang="en" ng-app="de.cismet.crisma.widgets.scenarioEvolutionWidget">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 expandfull"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 expandfull"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 expandfull"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js expandfull"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>My AngularJS App</title>
-        <link rel="stylesheet" href="css/app.css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>    
+        <!-- endbower -->
+
+        <!-- build:css(.tmp) styles/scenario-list-widget-angular.min.css -->
+        <link rel="stylesheet" href="styles/scenario-evolution-widget.css">
+        <!-- endbuild -->
     </head>
-    <body>
-        <div data-ng-controller="de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers.ScenarioEvolutionWidgetController">
-            <scenario-evolution worldstate-path="worldstatePath" selected-worldstate="selectedWorldstate"></scenario-evolution>
+    <body ng-app="de.cismet.crisma.widgets.scenarioEvolutionWidget" class="expandfull">
+        <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+          <script src="bower_components/es5-shim/es5-shim.js"></script>
+          <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+
+        <!-- demo only -->
+        <div class="row" ng-controller="AppCtrl" style="padding:10px">
+            <div class="row">
+                <div class="col-lg-12">
+                    <scenario-evolution-widget class="breadcrumb" input-worldstate="inputWorldstate" selected-worldstate="selectedWorldstate"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>{{selectedWorldstate| json}}</p>
+                </div>
+            </div>
+        </div>
         </div>
 
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.min.js"></script>-->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/services.js"></script>
-        <script src="js/controllers.js"></script>
-        <script src="js/directives.js"></script>
-        <script src="http://crisma.cismet.de/lib/js/de/cismet/crisma/dev/shared-services.js"></script>
-        <script src="http://crisma.cismet.de/lib/js/de/cismet/commons/angular/angularTools/AngularTools.js"></script>
-        <script src="http://crisma.cismet.de/lib/js/de/cismet/cids/cids.js"></script>
-        <script src="http://crisma.cismet.de/lib/js/de/cismet/cids/pure_rest_backend.js"></script>
-        <script src="http://codeorigin.jquery.com/jquery-2.0.3.js"></script>
+        <!-- bower plugin does not yet work as expected -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/icmm_js/dist/scripts/icmm_js.js"></script>
+        <script src="bower_components/scenario-node-evolution-widget/dist/scripts/scenario-node-evolution-widget.js"></script>
+        <script src="bower_components/scenario-node-evolution-widget/dist/scripts/scenario-nodes-evolution-widget-tpl.js"></script>
+        <!-- endbower -->
+
+        <!-- ngtemplates adds generated templates -->
+        <!-- build:js({.tmp,app}) scripts/scenario-list-widget-angular.min.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/ScenarioEvolutionDirectiveController.js"></script>
+        <script src="scripts/directives/ScenarioEvolutionDirective.js"></script>
+        <!-- endbuild -->
+
+        <!-- demo only -->
+        <script>
+                    angular.module('de.cismet.crisma.widgets.scenarioEvolutionWidget').config(
+                        [
+                            '$provide',
+                            function ($provide) {
+                                'use strict';
+
+                                $provide.constant('DEBUG', 'true');
+                                $provide.constant('CRISMA_DOMAIN', 'CRISMA');
+                                $provide.constant('CRISMA_ICMM_API', 'http://localhost:8890');
+                            }
+                        ]
+                        );
+        </script>
     </body>
 </html>
