@@ -1,7 +1,7 @@
 angular.module(
     'de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers',
     []
-    ).controller(
+).controller(
     'de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers.ScenarioEvolutionDirectiveController',
     [
         '$scope',
@@ -9,7 +9,6 @@ angular.module(
         'de.cismet.collidingNameService.Nodes',
         function ($scope, Worldstates, Nodes) {
             'use strict';
-            var worldstateId;
             // When the input worldstate changes we need to fetch the  
             // corrsponding node and pass it to the node based evolution widget
             $scope.$watch('inputWorldstate', function (newVal, oldVal) {
@@ -29,4 +28,4 @@ angular.module(
             });
         }
     ]
-    );
+);
