@@ -117,7 +117,7 @@ module.exports = function (grunt) {
     concat: {
       dist: {
           src: '<%= yeoman.app %>/scripts/**/*.js',
-          dest: '<%= yeoman.dist %>/scripts/scenario-evolution-widget.js'
+          dest: '<%= yeoman.dist %>/scripts/scenario-evolution-widget-angular.js'
       }
     },
     rev: {
@@ -299,11 +299,11 @@ module.exports = function (grunt) {
             options: {
                 module: 'de.cismet.crisma.widgets.scenarioEvolutiontWidget.directives',
                 htmlmin:  '<%= htmlmin.deploy %>',
-                usemin: 'scripts/scenario-evolution-widget.min.js'
+                usemin: 'scripts/scenario-evolution-widget-angular.min.js'
             },
             cwd: '<%= yeoman.app %>',
             src: 'templates/**.html',
-            dest: '<%= yeoman.dist %>/scripts/scenario-evolution-widget.min.js'
+            dest: '<%= yeoman.dist %>/scripts/scenario-evolution-widget-angular.min.js'
         },
         deploy: {
             options: {
@@ -311,7 +311,7 @@ module.exports = function (grunt) {
             },
             cwd: '<%= yeoman.app %>',
             src: 'templates/**.html',
-            dest: '<%= yeoman.dist %>/scripts/scenario-evolution-widget-tpl.js'
+            dest: '<%= yeoman.dist %>/scripts/scenario-evolution-widget-angular-tpl.js'
         }
     },
     // we do this since the grunt-google-cdn plugin is stale, quick and dirty
@@ -334,8 +334,8 @@ module.exports = function (grunt) {
         // global var but an injected one, maybe reconsider debug config in the future
         debugCode: {
             // this is the concatenated file
-            src: ['.tmp/concat/scripts/scenario-evolution-widget.min.js'],
-            dest: ['.tmp/concat/scripts/scenario-evolution-widget.min.js'],
+            src: ['.tmp/concat/scripts/scenario-evolution-widget-angular.min.js'],
+            dest: ['.tmp/concat/scripts/scenario-evolution-widget-angular.min.js'],
             replacements: [
                 // unfortunately we cannot simply match opening { and count other opening { and then match the last closing one
                 // if this is needed some time in the future, we have to match everything and process the text in a to-function
@@ -351,7 +351,7 @@ module.exports = function (grunt) {
     concat_css: {
         all: {
             src: ['<%= yeoman.app %>/styles/**/*.css'],
-            dest: '<%= yeoman.dist %>/styles/scenario-evolution-widget.css'
+            dest: '<%= yeoman.dist %>/styles/scenario-evolution-widget-angular.css'
         }
     }
   });

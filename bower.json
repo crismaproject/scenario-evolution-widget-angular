@@ -1,6 +1,6 @@
 {
   "name": "scenario-evolution-widget-angular",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "angular": "1.2.15",
     "json3": "~3.2.6",
@@ -9,7 +9,7 @@
     "bootstrap": "~3.0.3",
     "angular-resource": "1.2.15",
     "icmm_js": "v0.1.0",
-    "scenario-node-evolution-widget" : "v0.1.0"
+    "cids-node-path-widget" : "v0.1.2"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",
