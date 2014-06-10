@@ -5,7 +5,7 @@ angular.module(
         'de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers',
         'de.cismet.cids.rest.collidngNames.Nodes',
         'de.cismet.crisma.ICMM.Worldstates',
-        'de.cismet.crisma.widgets.scenarioNodeEvolutionWidget'
+        'de.cismet.cids.widgets.nodePathWidget'
     ]
 ).controller(
     'AppCtrl',
