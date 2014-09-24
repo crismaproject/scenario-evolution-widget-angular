@@ -1,6 +1,6 @@
 {
   "name": "scenario-evolution-widget-angular",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "dependencies": {
     "angular": "1.2.25",
     "json3": "3.2.6",
