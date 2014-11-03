@@ -1,9 +1,13 @@
-nbproject/private
 node_modules
+/nbproject/private/
 dist/*
+!dist/images
 !dist/scripts
 !dist/styles
 .tmp
 .sass-cache
 app/bower_components
 .idea
+target
+.checkDependencies
+test-results.xml

@@ -1,6 +1,5 @@
 angular.module(
-    'de.cismet.crisma.widgets.scenarioEvolutionWidget.directives',
-    []
+    'de.cismet.crisma.widgets.scenarioEvolutionWidget.directives'
 ).directive(
     'scenarioEvolutionWidget',
     function () {
@@ -13,7 +12,7 @@ angular.module(
             },
             restrict: 'E',
             replace: true,
-            templateUrl: 'templates/ScenarioEvolutionWidgetTemplate.html',
+            templateUrl: 'templates/scenarioEvolutionWidgetTemplate.html',
             controller: 'de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers.ScenarioEvolutionDirectiveController'
         };
     }
