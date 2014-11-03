@@ -1,6 +1,5 @@
 angular.module(
-    'de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers',
-    []
+    'de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers'
 ).controller(
     'de.cismet.crisma.widgets.scenarioEvolutionWidget.controllers.ScenarioEvolutionDirectiveController',
     [

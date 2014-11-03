@@ -11,13 +11,21 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/bower_components/angular-resource/angular-resource.js',
-      'app/scripts/*.js',
-      'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+        'target/dist/bower_components/es5-shim/es5-shim.js',
+        'target/dist/bower_components/json3/lib/json3.min.js',
+        'target/dist/bower_components/jquery/dist/jquery.js',
+        'target/dist/bower_components/angular/angular.js',
+        'target/dist/bower_components/angular-resource/angular-resource.js',
+        'target/dist/bower_components/icmm_js/dist/scripts/icmm_js.js',
+        'target/dist/bower_components/cids-node-path-widget/dist/scripts/cids-node-path-widget.js',
+        'target/dist/bower_components/cids-node-path-widget/dist/scripts/cids-node-path-widget-tpl.js',
+        'target/dist/scripts/app.js',
+        'target/dist/scripts/controllers/_module.js',
+        'target/dist/scripts/controllers/scenarioEvolutionDirectiveController.js',
+        'target/dist/scripts/directives/_module.js',
+        'target/dist/scripts/directives/scenarioEvolutionDirective.js',
+        'app/templates/scenarioEvolutionWidgetTemplate.html',
+        'test/spec/controllers/main.js'
     ],
 
     // list of files / patterns to exclude
