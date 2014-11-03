@@ -1,4 +1,4 @@
-scenario-evolution-widget-angular
+scenario-evolution-widget-angular [![Build Status](http://ci.cismet.de/buildStatus/icon?job=scenario-evolution-widget-angular)](https://ci.cismet.de/view/html5%20javascript/job/scenario-evolution-widget-angular/)
 =================================
 
 The AngularJS implementation of the Scenario Evolution Widget Functional Building Block.
